@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mary Adeoye | AI Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #f9f0ff, #e0f2fe); color: #1e293b; scroll-behavior: smooth; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .navbar { background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 2px solid #f97316; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 16px 24px; max-width: 1280px; margin: 0 auto; }
+    .logo a { font-weight: 800; font-size: 1.8rem; background: linear-gradient(120deg, #ff8c00, #ff2d75, #8b5cf6); background-clip: text; -webkit-background-clip: text; color: transparent; text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { text-decoration: none; font-weight: 600; color: #0f172a; transition: 0.2s; }
+    .nav-links a:hover { color: #f97316; border-bottom: 2px solid #f97316; }
+    section { padding: 60px 0; border-bottom: 1px solid rgba(255,255,255,0.4); }
+    .section-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 40px; background: linear-gradient(120deg, #b91c1c, #d97706, #7c3aed); background-clip: text; -webkit-background-clip: text; color: transparent; border-left: 6px solid #f97316; padding-left: 20px; }
+    .hero { padding: 50px 0; }
+    .hero-grid { display: flex; flex-wrap: wrap; gap: 48px; align-items: center; justify-content: space-between; }
+    .hero-content { flex: 2; }
+    .hero-image { flex: 1; text-align: center; }
+    .profile-pic { width: 260px; height: 260px; object-fit: cover; border-radius: 50%; border: 5px solid white; box-shadow: 0 20px 35px -10px rgba(0,0,0,0.2), 0 0 0 8px #ffedd5; background: #fbcfe8; }
+    .hero-badge { background: linear-gradient(90deg, #ffedd5, #fef08a); color: #b45309; padding: 6px 16px; border-radius: 60px; font-size: 0.8rem; font-weight: 700; width: fit-content; margin-bottom: 16px; }
+    .hero-name { font-size: 3.2rem; font-weight: 800; background: linear-gradient(135deg, #0f172a, #d97706); background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .hero-title { font-size: 1.6rem; font-weight: 700; color: #ea580c; margin: 8px 0; }
+    .contact-info-hero { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+    .contact-info-hero a, .contact-info-hero span { background: white; padding: 8px 18px; border-radius: 50px; text-decoration: none; color: #1e293b; font-weight: 500; border: 1px solid #ffe0b5; }
+    .btn-resume { background: linear-gradient(90deg, #f97316, #f59e0b); color: white; border: none; padding: 12px 32px; border-radius: 60px; font-weight: 700; cursor: pointer; }
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 20px; }
+    .skill-chip { background: linear-gradient(110deg, #fef9c3, #fed7aa); padding: 8px 20px; border-radius: 40px; font-weight: 600; color: #92400e; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+    .project-card { background: white; border-radius: 32px; padding: 24px; transition: 0.3s; border: 1px solid #ffe0b5; }
+    .project-card:hover { transform: translateY(-8px); border-color: #f97316; }
+    .project-icon { font-size: 2.2rem; background: linear-gradient(135deg, #f97316, #ec489a); background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .project-title { font-weight: 800; font-size: 1.3rem; }
+    .tech-badge { background: #fef3c7; color: #b45309; font-size: 0.7rem; padding: 4px 12px; border-radius: 50px; font-weight: 600; }
+    .edu-card { background: linear-gradient(115deg, #ffffff, #fffbeb); border-radius: 32px; padding: 28px; border-left: 8px solid #f97316; }
+    .contact-wrapper { display: flex; flex-wrap: wrap; gap: 30px; background: rgba(255,255,245,0.8); border-radius: 48px; padding: 32px; }
+    .footer { background: #0f172a; color: #facc15; text-align: center; padding: 32px 0; }
+    @media (max-width: 768px) { .hero-name { font-size: 2.2rem; } .hero-grid { flex-direction: column-reverse; text-align: center; } .profile-pic { width: 200px; height: 200px; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><a href="#">🌟 MA.dev</a></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge"><i class="fas fa-magic"></i> AI Engineer & Backend Creator</div>
+          <h1 class="hero-name">MARY ADEOYE OLUWAFUNMILAYO</h1>
+          <div class="hero-title">✨ AI Engineer | AI Backend Developer</div>
+          <div class="contact-info-hero">
+            <span><i class="fas fa-phone"></i> 09026267646</span>
+            <a href="mailto:maryadeoye7@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/adeoye-mary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/ADEOYE-MARY25" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <button class="btn-resume" id="downloadBtn"><i class="fas fa-download"></i> Download Resume</button>
+        </div>
+        <div class="hero-image">
+           
+          <img src="me.jpg" alt="Mary Adeoye" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?background=f97316&color=fff&name=Mary+A'">
+          <p style="margin-top: 12px; font-size:0.8rem; color:#b45309;"><i class="fas fa-info-circle"></i> To add your photo: save a picture as "me.jpg" in this folder</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title"><i class="fas fa-user-astronaut"></i> About Me</h2>
+        <div style="background: linear-gradient(145deg, #fff8f0, #ffffff); border-radius: 40px; padding: 32px;">
+          <p>Innovative AI Engineer and AI Backend Developer with hands-on experience in machine learning, intelligent systems, backend logic development, data processing, and AI-driven applications. Skilled in Python, SQL, APIs, machine learning frameworks, data analytics, and backend development with practical experience building projects involving image recognition, intelligent assistants, predictive analysis, and automated data workflows. Passionate about developing scalable AI solutions and backend systems for modern technology companies and international digital platforms.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title"><i class="fas fa-code"></i> Tech Skills</h2>
+        <div class="skills-grid">
+          <span class="skill-chip">Python</span><span class="skill-chip">SQL</span><span class="skill-chip">Machine Learning</span>
+          <span class="skill-chip">FastAPI/Flask</span><span class="skill-chip">Pandas/NumPy</span><span class="skill-chip">TensorFlow</span>
+          <span class="skill-chip">NLP</span><span class="skill-chip">Power BI</span><span class="skill-chip">Git/GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title"><i class="fas fa-laptop-code"></i> Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card"><div class="project-icon"><i class="fas fa-brain"></i></div><div class="project-title">Agentic Pattern AI</div><div class="project-tech"><span class="tech-badge">Python</span><span class="tech-badge">AI Workflows</span></div><div class="project-desc">Intelligent workflow automation & backend execution.</div></div>
+          <div class="project-card"><div class="project-icon"><i class="fas fa-file-alt"></i></div><div class="project-title">CV Chunking</div><div class="project-tech"><span class="tech-badge">NLP</span><span class="tech-badge">Backend</span></div><div class="project-desc">Resume parsing and intelligent chunking.</div></div>
+          <div class="project-card"><div class="project-icon"><i class="fas fa-apple-alt"></i></div><div class="project-title">Fruit Classification ML</div><div class="project-tech"><span class="tech-badge">TensorFlow</span></div><div class="project-desc">CNN-based fruit image classification.</div></div>
+          <div class="project-card"><div class="project-icon"><i class="fas fa-chart-line"></i></div><div class="project-title">Customer Behavior</div><div class="project-tech"><span class="tech-badge">Pandas</span><span class="tech-badge">Power BI</span></div><div class="project-desc">Data analysis & interactive dashboards.</div></div>
+          <div class="project-card"><div class="project-icon"><i class="fas fa-home"></i></div><div class="project-title">Home Loan Prediction</div><div class="project-tech"><span class="tech-badge">Scikit-learn</span></div><div class="project-desc">Loan approval predictive model.</div></div>
+          <div class="project-card"><div class="project-icon"><i class="fas fa-camera"></i></div><div class="project-title">Image Recognition</div><div class="project-tech"><span class="tech-badge">Computer Vision</span></div><div class="project-desc">Real-time image recognition pipeline.</div></div>
+          <div class="project-card"><div class="project-icon"><i class="fas fa-hand-holding-heart"></i></div><div class="project-title">CulturalMed</div><div class="project-tech"><span class="tech-badge">Data Analytics</span></div><div class="project-desc">Healthcare & cultural insights project.</div></div>
+          <div class="project-card"><div class="project-icon"><i class="fas fa-landmark"></i></div><div class="project-title">TaxQA NG</div><div class="project-tech"><span class="tech-badge">NLP</span></div><div class="project-desc">Intelligent Nigerian tax assistant.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="edu-card"><div class="edu-title">B.Sc. Agricultural Economics</div><div>Olabisi Onabanjo University, Nigeria</div><div>2019 – October 2024</div><div><strong>Relevant Coursework:</strong> Data Analysis, Database Management, Statistics, Machine Learning, Computer Programming.</div></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title"><i class="fas fa-address-card"></i> Contact</h2>
+        <div class="contact-wrapper">
+          <div><i class="fas fa-map-marker-alt"></i> Abeokuta, Ogun State, Nigeria<br><i class="fas fa-phone"></i> 09026267646<br><i class="fas fa-envelope"></i> <a href="mailto:maryadeoye7@gmail.com">maryadeoye7@gmail.com</a><br><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/adeoye-mary">linkedin.com/in/adeoye-mary</a><br><i class="fab fa-github"></i> <a href="https://github.com/ADEOYE-MARY25">github.com/ADEOYE-MARY25</a></div>
+          <div style="border-left:2px solid #fed7aa; padding-left:24px;"><p>Open to AI Engineer / Backend Developer roles.</p><a href="mailto:maryadeoye7@gmail.com" style="background:#f97316; color:white; padding:10px 24px; border-radius:40px; text-decoration:none; display:inline-block;">✉️ Send Message</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="https://github.com/ADEOYE-MARY25" style="color:#facc15; margin:0 8px;"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/adeoye-mary" style="color:#facc15; margin:0 8px;"><i class="fab fa-linkedin"></i></a>
+      <p style="margin-top:20px;">© 2025 Mary Adeoye Oluwafunmilayo — Built with 💜</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      const resume = `MARY ADEOYE OLUWAFUNMILAYO\nAI Engineer | AI Backend Developer\nEmail: maryadeoye7@gmail.com\nSkills: Python, ML, FastAPI, TensorFlow, NLP\nProjects: Agentic AI, CV Chunking, Fruit Classification, TaxQA NG\nEducation: B.Sc Agricultural Economics (2024)`;
+      const blob = new Blob([resume], {type: 'text/plain'});
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'Mary_Adeoye_Resume.txt';
+      link.click();
+      URL.revokeObjectURL(link.href);
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
+</body>
+</html>
