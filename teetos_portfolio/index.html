@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Tosin Olunaike | Multidisciplinary Professional</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #fff9f0 0%, #fef7e8 100%);
+            color: #2c2b28;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 1.8rem;
+        }
+
+        /* colorful accent variables */
+        :root {
+            --primary: #e67e22;
+            --primary-dark: #d35400;
+            --secondary: #8e44ad;
+            --accent-teal: #16a085;
+            --accent-blue: #2980b9;
+            --soft-peach: #ffe8d6;
+            --card-bg: #ffffffdd;
+            --shadow: 0 15px 35px rgba(0, 0, 0, 0.05), 0 3px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            border-left: 6px solid var(--primary);
+            padding-left: 1rem;
+            margin-bottom: 1.8rem;
+            letter-spacing: -0.3px;
+        }
+
+        /* cards / grids */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(2px);
+            border-radius: 1.6rem;
+            padding: 1.5rem 1.6rem;
+            box-shadow: var(--shadow);
+            transition: all 0.25s ease;
+            border: 1px solid rgba(230, 126, 34, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(230, 126, 34, 0.5);
+            box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.12);
+            background: white;
+        }
+
+        .exp-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .exp-title {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #c0392b;
+            background: linear-gradient(120deg, #c0392b, #e67e22);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .exp-org {
+            font-weight: 600;
+            color: #7f8c8d;
+            margin-bottom: 0.2rem;
+            font-size: 0.9rem;
+        }
+
+        .exp-date {
+            font-size: 0.75rem;
+            background: #fde6d2;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            color: #e67e22;
+            font-weight: 600;
+        }
+
+        .exp-desc ul {
+            list-style: none;
+            margin-top: 0.7rem;
+        }
+
+        .exp-desc li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 0.6rem;
+            align-items: baseline;
+            font-size: 0.9rem;
+        }
+
+        .exp-desc li i {
+            color: var(--accent-teal);
+            width: 1.2rem;
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: #fef2e6;
+            color: #b64926;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin: 0.25rem 0.4rem;
+            border: 1px solid #ffcd94;
+        }
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.2rem;
+            align-items: center;
+            background: linear-gradient(125deg, #ffffff 0%, #fff7ef 100%);
+            border-radius: 2.5rem;
+            padding: 2rem 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(230, 126, 34, 0.2);
+        }
+
+        .hero-img {
+            flex-shrink: 0;
+        }
+
+        .hero-img img {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #ffd6a5;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+            background: #fbe9d2;
+        }
+
+        .hero-info h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            background: linear-gradient(145deg, #d35400, #8e44ad);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #e67e22;
+            margin: 0.5rem 0 0.8rem 0;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .contact-bar a, .contact-bar span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #fff0e3;
+            padding: 0.4rem 1rem;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            color: #b64926;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .contact-bar a:hover {
+            background: #ffe0cc;
+            color: #a04018;
+        }
+
+        .btn-outline {
+            border: 1px solid #e67e22;
+            background: transparent;
+            padding: 0.6rem 1.3rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #d35400;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: 0.2s;
+            text-decoration: none;
+            margin-right: 0.7rem;
+        }
+
+        .btn-outline:hover {
+            background: #e67e22;
+            color: white;
+            border-color: #e67e22;
+        }
+
+        .btn-primary {
+            background: linear-gradient(95deg, #e67e22, #f39c12);
+            border: none;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #d35400;
+            color: white;
+        }
+
+        .badge-cert {
+            background: #fdebd0;
+            border-radius: 50px;
+            padding: 0.2rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #c0392b;
+            display: inline-block;
+            margin: 0.2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 2px dashed #ffcd94;
+            color: #b26b3a;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 760px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-info h1 {
+                font-size: 2rem;
+            }
+            .contact-bar {
+                justify-content: center;
+            }
+            .container {
+                padding: 1.2rem;
+            }
+        }
+
+        .interest-pill {
+            background: #f4e9ff;
+            border-radius: 30px;
+            padding: 0.2rem 1rem;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin: 0.2rem;
+            color: #6c3483;
+        }
+
+        .quote-note {
+            background: #fff3e0;
+            border-radius: 1rem;
+            padding: 1rem;
+            font-style: italic;
+            border-left: 4px solid #e67e22;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-img">
+            <!-- User adds profile.jpg in same folder -->
+            <img src="profile.jpg" alt="Olunaike Oluwatosin" 
+                 onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?background=e67e22&color=fff&bold=true&size=170&name=TOSIN';">
+        </div>
+        <div class="hero-info">
+            <h1>Olunaike Oluwatosin O.</h1>
+            <div class="hero-tagline">✨ Administrator | Educator | Creative Leader | Agribusiness Enthusiast</div>
+            <div class="contact-bar">
+                <a href="mailto:olunaikeoluwatosin21@gmail.com"><i class="fas fa-envelope"></i> olunaikeoluwatosin21</a>
+                <a href="tel:+2348186653702"><i class="fas fa-phone-alt"></i> 08186653702</a>
+                <a href="https://www.linkedin.com/in/OLUNAIKE" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <span><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</span>
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="#contact-info" class="btn-outline"><i class="fas fa-paper-plane"></i> Get in touch</a>
+                <a href="mailto:olunaikeoluwatosin21@gmail.com?subject=Opportunity%20for%20Tosin" class="btn-outline btn-primary"><i class="fas fa-file-alt"></i> Request CV</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Objective + Summary combined cards -->
+    <div class="grid-2" style="margin-bottom: 2rem;">
+        <div class="card">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;">
+                <i class="fas fa-bullseye" style="color: #e67e22; font-size: 1.5rem;"></i>
+                <h3 style="font-weight: 700;">Objective</h3>
+            </div>
+            <p>To work in an organization where team spirit reigns and there is effective utilization of intellectual resources to overall achievement of the corporate objectives and mission.</p>
+        </div>
+        <div class="card">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;">
+                <i class="fas fa-user-check" style="color: #16a085; font-size: 1.5rem;"></i>
+                <h3 style="font-weight: 700;">Summary</h3>
+            </div>
+            <p>Dedicated and versatile professional with experience in teaching, administration, management, and church leadership. Proven ability to multitask, lead teams, and manage multiple responsibilities effectively across diverse industries.</p>
+        </div>
+    </div>
+
+    <!-- Work Experience (comprehensive) -->
+    <section>
+        <div class="section-title">💼 Work Experience</div>
+        <div class="grid-2">
+            <!-- Computer Operator -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Computer Operator</span><span class="exp-date">2014</span></div><div class="exp-org">Boluwatife Business Centre, Shomolu</div><div class="exp-desc"><ul><li><i class="fas fa-desktop"></i> Identifying and correcting file & system errors</li><li><i class="fas fa-print"></i> Cleaning printers, preventive maintenance</li><li><i class="fas fa-database"></i> Support during business continuity, machine maintenance</li></ul></div></div>
+            <!-- Teacher -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Teacher</span><span class="exp-date">2019</span></div><div class="exp-org">Mabless Children School</div><div class="exp-desc"><ul><li><i class="fas fa-chalkboard-user"></i> Comprehensive lessons & visual learning tools</li><li><i class="fas fa-user-graduate"></i> Individualized instruction, progress assessment</li><li><i class="fas fa-calendar-alt"></i> Plan outdoor activities, parent meetings</li></ul></div></div>
+            <!-- Sales Rep Vellora -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Sales Representative</span><span class="exp-date">2021</span></div><div class="exp-org">Vellora Beauty Range</div><div class="exp-desc"><ul><li><i class="fas fa-concierge-bell"></i> Front desk management & guest reception</li><li><i class="fas fa-phone"></i> Incoming calls & message handling</li><li><i class="fas fa-boxes"></i> Receive chemical raw materials, monitor supplies</li></ul></div></div>
+            <!-- NCCF Financial Secretary -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Financial Secretary & Sister Coordinator</span><span class="exp-date">2021</span></div><div class="exp-org">NCCF</div><div class="exp-desc"><ul><li><i class="fas fa-coins"></i> Manage financial records, financial plans</li><li><i class="fas fa-female"></i> Coordinated sisterhood activities</li></ul></div></div>
+            <!-- HAZ Children World -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Sales Representative</span><span class="exp-date">2022</span></div><div class="exp-org">HAZ Children World</div><div class="exp-desc"><ul><li><i class="fas fa-child"></i> Assisted customers, product recommendations</li><li><i class="fas fa-cash-register"></i> Processed transactions, returns management</li><li><i class="fas fa-comments"></i> Built strong customer relationships</li></ul></div></div>
+            <!-- Baker & Snack Marketer -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Baker & Snack Marketer</span><span class="exp-date">2023</span></div><div class="exp-org">OOJ Bakery</div><div class="exp-desc"><ul><li><i class="fas fa-bread-slice"></i> Baked pastries, bread, snacks to high standards</li><li><i class="fas fa-chart-line"></i> Marketing strategies, product displays</li><li><i class="fas fa-users"></i> Customer feedback & team collaboration</li></ul></div></div>
+            <!-- Head of Ushering -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Head of Ushering Unit</span><span class="exp-date">2023</span></div><div class="exp-org">The Communion City of Zion</div><div class="exp-desc"><ul><li><i class="fas fa-hand-peace"></i> Led ushering team, coordinated worship services</li><li><i class="fas fa-clock"></i> Ensured smooth service delivery</li></ul></div></div>
+            <!-- Membership Coordinator -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Membership Coordinator</span><span class="exp-date">2023 - Present</span></div><div class="exp-org">The Communion City of Zion</div><div class="exp-desc"><ul><li><i class="fas fa-id-card"></i> Manage membership records & activities</li><li><i class="fas fa-chart-simple"></i> Develop growth strategies</li></ul></div></div>
+            <!-- Laundry Manager -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Laundry Manager</span><span class="exp-date">2024</span></div><div class="exp-org">SmartNKleen Laundry Services</div><div class="exp-desc"><ul><li><i class="fas fa-tshirt"></i> Managed laundry operations & staff supervision</li><li><i class="fas fa-clipboard-list"></i> Quality control, timely delivery</li></ul></div></div>
+            <!-- Internship Soilless Farm -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Intern</span><span class="exp-date">2024</span></div><div class="exp-org">Soilless Farm Lab</div><div class="exp-desc"><ul><li><i class="fas fa-seedling"></i> Hands-on hydroponics & aeroponics systems</li><li><i class="fas fa-flask"></i> Crop monitoring, research & development projects</li><li><i class="fas fa-leaf"></i> Sustainable farming operations</li></ul></div></div>
+            <!-- Drama Coordinator -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Drama Coordinator</span><span class="exp-date">2019 - Present</span></div><div class="exp-org">The Lord Reigneth Evangelical Drama Ministry</div><div class="exp-desc"><ul><li><i class="fas fa-mask"></i> Develop drama programs, coordinate rehearsals & performances</li><li><i class="fas fa-users-viewfinder"></i> Manage drama teams</li></ul></div></div>
+            <!-- Admin ABJ Consulting -->
+            <div class="card"><div class="exp-header"><span class="exp-title">Admin (Remote & Office)</span><span class="exp-date">2025</span></div><div class="exp-org">ABJ Consulting and Services</div><div class="exp-desc"><ul><li><i class="fas fa-tasks"></i> Administrative support, schedule & database management</li><li><i class="fas fa-headset"></i> Customer inquiries, seamless workflow</li></ul></div></div>
+        </div>
+    </section>
+
+    <!-- Skills + Tools -->
+    <div class="grid-2">
+        <section style="margin-bottom:0;">
+            <div class="section-title">⭐ Core Skills</div>
+            <div class="card">
+                <div style="display: flex; flex-wrap: wrap;">
+                    <span class="skill-tag">Leadership & Team Management</span>
+                    <span class="skill-tag">Administration & Organization</span>
+                    <span class="skill-tag">Communication & Interpersonal</span>
+                    <span class="skill-tag">Time Management & Multitasking</span>
+                    <span class="skill-tag">Financial Management</span>
+                    <span class="skill-tag">Event Planning & Coordination</span>
+                    <span class="skill-tag">Customer Relationship</span>
+                    <span class="skill-tag">Teaching & Curriculum Design</span>
+                    <span class="skill-tag">Sales & Marketing</span>
+                    <span class="skill-tag">Soilless Farming Techniques</span>
+                </div>
+            </div>
+        </section>
+        <section style="margin-bottom:0;">
+            <div class="section-title">🛠️ Tools & Tech</div>
+            <div class="card">
+                <div>
+                    <span class="skill-tag"><i class="fab fa-microsoft"></i> Microsoft Office (Word, Excel, PPT)</span>
+                    <span class="skill-tag"><i class="fab fa-google"></i> Google Suite (Docs, Sheets, Slides, Gmail)</span>
+                    <span class="skill-tag">Calendly & Scheduling Software</span>
+                    <span class="skill-tag">Database Management</span>
+                    <span class="skill-tag">Remote Collaboration Tools</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Education -->
+    <section>
+        <div class="section-title">🎓 Education & Training</div>
+        <div class="grid-2">
+            <div class="card"><div class="exp-header"><span class="exp-title">National Youth Service Corps (NYSC)</span><span class="exp-date">2021 – 2022</span></div><div>Certificate of Service</div></div>
+            <div class="card"><div class="exp-header"><span class="exp-title">Higher National Diploma (Chemistry)</span><span class="exp-date">2019 – 2020</span></div><div>Moshood Abiola Polytechnic, Abeokuta</div></div>
+            <div class="card"><div class="exp-header"><span class="exp-title">Student Industrial Work Experience Scheme (SIWES)</span><span class="exp-date">2016 – 2017</span></div><div>Moshood Abiola Polytechnic</div></div>
+            <div class="card"><div class="exp-header"><span class="exp-title">Ordinary National Diploma (Science Lab. Tech)</span><span class="exp-date">2015 – 2017</span></div><div>Moshood Abiola Polytechnic, Abeokuta</div></div>
+        </div>
+    </section>
+
+    <!-- Certifications & Awards -->
+    <section>
+        <div class="section-title">📜 Certifications & Awards</div>
+        <div class="card" style="background: #fff7ef;">
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="badge-cert"><i class="fas fa-certificate"></i> ALX Virtual Assistant Program (2022)</span>
+                <span class="badge-cert"><i class="fas fa-certificate"></i> Tmax (2023)</span>
+                <span class="badge-cert"><i class="fas fa-certificate"></i> Jobberman Certification (2024)</span>
+                <span class="badge-cert"><i class="fas fa-certificate"></i> Soilless Farm Lab (2024)</span>
+                <span class="badge-cert"><i class="fas fa-certificate"></i> School of Prophetic Scribe (2024)</span>
+                <span class="badge-cert"><i class="fas fa-certificate"></i> Onbecoming Mentorship Academy (2025)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership & volunteer extra / Drama + Church roles already in experience, but highlighting -->
+    <section>
+        <div class="section-title">🌟 Leadership & Ministry Engagements</div>
+        <div class="grid-2">
+            <div class="card"><i class="fas fa-church"></i> <strong>Head of Ushering Unit</strong> – The Communion City of Zion <br> <span class="exp-date">2023</span> – Led service flow & team coordination.</div>
+            <div class="card"><i class="fas fa-users"></i> <strong>Membership Coordinator</strong> – Since 2023 <br> Membership growth, records, and engagement.</div>
+            <div class="card"><i class="fas fa-theater-masks"></i> <strong>Drama Coordinator</strong> – The Lord Reigneth Evangelical Drama Ministry (2019–till date) <br> Program development, rehearsals, team leadership.</div>
+            <div class="card"><i class="fas fa-hand-holding-heart"></i> <strong>NCCF Financial Secretary & Sister Coordinator</strong> – Financial integrity & sisterhood development.</div>
+        </div>
+    </section>
+
+    <!-- Additional: Soilless Farming highlight -->
+    <div class="quote-note" style="margin-bottom: 2rem;">
+        <i class="fas fa-seedling" style="color: #16a085;"></i> <strong>Passionate about sustainable agriculture:</strong> Completed internship at Soilless Farm Lab with hands-on experience in hydroponics, aeroponics, and sustainable farm operations.
+    </div>
+
+    <!-- Reference & Contact final -->
+    <section id="contact-info">
+        <div class="section-title">📬 Reference & Contact</div>
+        <div class="card" style="text-align: center;">
+            <p><i class="fas fa-user-friends"></i> <strong>Miss Olunaike Olubisoye Ajoke</strong><br> Banker, UBA UNILAG Lagos State<br> <i class="fas fa-phone-alt"></i> 08134318723</p>
+            <hr style="margin: 1rem 0; border-color: #ffe0cc;">
+            <div>
+                <a href="mailto:olunaikeoluwatosin21@gmail.com" style="background: #e67e22; color: white; padding: 0.6rem 1.8rem; border-radius: 40px; text-decoration: none; display: inline-block; margin: 0.5rem;"><i class="fas fa-envelope"></i> Email Tosin</a>
+                <a href="tel:+2348186653702" style="background: #f5e2ce; color: #b64926; padding: 0.6rem 1.6rem; border-radius: 40px; text-decoration: none; display: inline-block; margin: 0.5rem;"><i class="fas fa-phone"></i> Call +234 818 665 3702</a>
+            </div>
+            <p style="margin-top: 1.2rem; font-size: 0.85rem;">References available upon request | Open to administrative, teaching, agribusiness, and leadership roles.</p>
+        </div>
+    </section>
+
+    <footer>
+        <i class="fas fa-heart" style="color: #e67e22;"></i> Olunaike Oluwatosin — Driven by excellence, service, and growth<br>
+        Portfolio deployed | debby.vercel.app style (custom domain ready)
+    </footer>
+</div>
+
+<!-- optional script for minor interaction -->
+<script>
+    // simple console note about profile image
+    console.log("✨ Portfolio ready — add profile picture as 'profile.jpg' in the same folder as index.html");
+</script>
+</body>
+</html>
