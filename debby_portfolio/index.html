@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Deborah Akintulubo | Forestry & Wildlife Specialist</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefef7;
+      color: #1a2c1e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* section styling */
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      border-left: 6px solid #2b5e2f;
+      padding-left: 1rem;
+      margin-bottom: 1.8rem;
+      color: #1e3a24;
+    }
+
+    /* cards & grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1.25rem;
+      padding: 1.4rem 1.6rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.2s ease;
+      border: 1px solid #e9efe6;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 30px -12px rgba(32, 64, 32, 0.12);
+      border-color: #cbdcc3;
+    }
+
+    .exp-header, .edu-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.6rem;
+    }
+
+    .exp-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #1f4f2d;
+    }
+
+    .exp-org {
+      font-weight: 600;
+      color: #2e5c34;
+      margin-bottom: 0.25rem;
+    }
+
+    .exp-date {
+      font-size: 0.8rem;
+      background: #eff5eb;
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+      color: #2a6230;
+      font-weight: 500;
+    }
+
+    .exp-desc {
+      margin-top: 0.75rem;
+      padding-left: 0.2rem;
+    }
+
+    .exp-desc ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .exp-desc li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.6rem;
+      align-items: baseline;
+    }
+
+    .exp-desc li i {
+      color: #3a7c42;
+      font-size: 0.8rem;
+      width: 1.2rem;
+      margin-top: 0.2rem;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: #eef3ea;
+      color: #1b4c24;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin: 0.25rem 0.4rem 0.25rem 0;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2.8rem;
+      background: #ffffff;
+      border-radius: 2rem;
+      padding: 2rem 2rem;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e2ecdb;
+    }
+
+    .hero-img {
+      flex-shrink: 0;
+    }
+
+    .hero-img img {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #d9e8d1;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      background: #f5faf0;
+    }
+
+    .hero-info h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #1c401f;
+      line-height: 1.2;
+    }
+
+    .hero-tagline {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #4a6b3c;
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 0.8rem;
+    }
+
+    .contact-bar a, .contact-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #2c5a2c;
+      font-size: 0.9rem;
+      text-decoration: none;
+      background: #f4f8ef;
+      padding: 0.4rem 1rem;
+      border-radius: 60px;
+      transition: 0.2s;
+    }
+
+    .contact-bar a:hover {
+      background: #e2ecd9;
+      color: #1b4823;
+    }
+
+    .btn-outline {
+      border: 1px solid #3c7843;
+      background: transparent;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      color: #2a6e2f;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-outline:hover {
+      background: #eef5ea;
+      border-color: #266b2b;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid #dce9d3;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #5a7352;
+    }
+
+    @media (max-width: 780px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-info h1 {
+        font-size: 2rem;
+      }
+      .contact-bar {
+        justify-content: center;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+      .container {
+        padding: 1.2rem;
+      }
+    }
+
+    .publication-block {
+      background: #fafdf6;
+      padding: 1rem 1.4rem;
+      border-radius: 1rem;
+      border-left: 4px solid #457a3b;
+      font-size: 0.9rem;
+    }
+
+    .award-badge {
+      background: #fdf6e3;
+      border-radius: 40px;
+      padding: 0.2rem 1rem;
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 0.6rem;
+      font-size: 0.75rem;
+      color: #8a6e2c;
+    }
+
+    .interests i {
+      margin-right: 0.4rem;
+      color: #3f7846;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- HERO Section -->
+  <div class="hero">
+    <div class="hero-img">
+      <!-- User adds profile.jpg in the same folder as index.html -->
+      <img src="profile.jpg" alt="Deborah Akintulubo" 
+           onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?background=2e6b32&color=fff&bold=true&size=160&name=D.A';">
+    </div>
+    <div class="hero-info">
+      <h1>Deborah Akintulubo</h1>
+      <div class="hero-tagline">Forestry & Wildlife Specialist | Administrator</div>
+      <div class="contact-bar">
+        <a href="tel:+2347033769562"><i class="fas fa-phone-alt"></i> +234 703 376 9562</a>
+        <a href="tel:+2348116335172"><i class="fas fa-phone-alt"></i> +234 811 633 5172</a>
+        <a href="mailto:akintulubodeborah@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <span><i class="fas fa-map-marker-alt"></i> Ogun State, Nigeria</span>
+      </div>
+      <div style="margin-top: 1.2rem;">
+        <a href="#contact-cv" class="btn-outline" id="requestCvBtn"><i class="fas fa-file-pdf"></i> Request CV</a>
+        <a href="mailto:akintulubodeborah@gmail.com?subject=Professional%20Opportunity" class="btn-outline" style="margin-left: 0.5rem;"><i class="fas fa-paper-plane"></i> Contact me</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Professional summary -->
+  <section>
+    <div class="section-title">Professional Summary</div>
+    <div class="card" style="background:#fefcf5;">
+      <p style="font-size:1.03rem;">🌟 A first-class graduate in Forestry and Wildlife Management with hands-on experience spanning ecological field research, biodiversity conservation, government forestry administration, and virtual/administrative support. Combines strong scientific and analytical expertise with demonstrated professional skills in data management, report writing, scheduling, and organizational coordination. Recognized with the <strong>Vice Chancellor's Award</strong> for academic excellence and the <strong>Top 100 Africa Future Leaders distinction (2025)</strong>. Committed to applying interdisciplinary skills across conservation, sustainability, research, and administrative sectors.</p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <div class="section-title">Education</div>
+    <div class="card">
+      <div class="exp-header">
+        <div><span class="exp-title">B. Agriculture – Forestry & Wildlife Management</span><br><span class="exp-org">Olabisi Onabanjo University, Ago-Iwoye, Ogun State</span></div>
+        <div class="exp-date">Oct 2019 – Oct 2024</div>
+      </div>
+      <div><strong>First Class Honours | GPA: 4.53 / 5.00</strong></div>
+      <div style="margin-top: 10px;"><i class="fas fa-tree"></i> <strong>Thesis:</strong> Assessment of Seasonal Variation in Ecological Indices of Teak Plantation Canopy in Arakanga Forest Reserve</div>
+    </div>
+  </section>
+
+  <!-- Professional Experience + Teaching (combined layout but distinct) -->
+  <section>
+    <div class="section-title">Professional Experience</div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="exp-header"><span class="exp-title">NYSC Intern – Forestry Department</span><span class="exp-date">June 2025 – May 2026</span></div>
+        <div class="exp-org">Ministry of Agriculture and Food System, Nigeria</div>
+        <div class="exp-desc"><ul><li><i class="fas fa-check-circle"></i> Support daily forestry operations and departmental administrative functions.</li><li><i class="fas fa-check-circle"></i> Assist with ecological documentation, field-related reporting, data archiving.</li><li><i class="fas fa-check-circle"></i> Maintain organized data systems improving workflow efficiency and record accuracy.</li></ul></div>
+      </div>
+      <div class="card">
+        <div class="exp-header"><span class="exp-title">Virtual Assistant</span><span class="exp-date">2025</span></div>
+        <div class="exp-org">Digital Amazonite</div>
+        <div class="exp-desc"><ul><li><i class="fas fa-check-circle"></i> Assist Creative Director with task management, calendar coordination, scheduling.</li><li><i class="fas fa-check-circle"></i> Prepare, organize, and file meeting minutes and internal communications.</li><li><i class="fas fa-check-circle"></i> Coordinate administrative workflows as operational support resource.</li></ul></div>
+      </div>
+      <div class="card">
+        <div class="exp-header"><span class="exp-title">Forestry Assistant (IT)</span><span class="exp-date">July – Aug 2023</span></div>
+        <div class="exp-org">Ministry of Forestry, Oke-Mosan, Abeokuta</div>
+        <div class="exp-desc"><ul><li><i class="fas fa-check-circle"></i> Digitized forestry records, enhancing accuracy & accessibility.</li><li><i class="fas fa-check-circle"></i> Prepared research reports & policy documentation for departmental submissions.</li><li><i class="fas fa-check-circle"></i> Streamlined office workflows and data documentation initiatives.</li></ul></div>
+      </div>
+      <div class="card">
+        <div class="exp-header"><span class="exp-title">Field Research Assistant (IT)</span><span class="exp-date">Oct 2023</span></div>
+        <div class="exp-org">Old Oyo National Park, Sepeteri, Oyo State</div>
+        <div class="exp-desc"><ul><li><i class="fas fa-check-circle"></i> Collected & organized ecological biodiversity data for conservation projects.</li><li><i class="fas fa-check-circle"></i> Assisted biodiversity assessments, habitat monitoring techniques.</li><li><i class="fas fa-check-circle"></i> Produced structured reports supporting conservation decision-making.</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching & Academic Support Experience -->
+  <section>
+    <div class="section-title">Teaching & Academic Support</div>
+    <div class="card">
+      <div class="exp-header"><span class="exp-title">STEM Subjects Tutor</span><span class="exp-date">2019 – 2022</span></div>
+      <div class="exp-org">Private / Freelance, Ogun State, Nigeria</div>
+      <div class="exp-desc"><ul><li><i class="fas fa-chalkboard-user"></i> Mentored prospective university students, achieving consistent academic success.</li><li><i class="fas fa-chalkboard-user"></i> Designed lesson plans, academic materials, structured tutorials for peers.</li><li><i class="fas fa-chalkboard-user"></i> Supported students in study habits and self-directed learning skills.</li></ul></div>
+    </div>
+  </section>
+
+  <!-- Research Experience -->
+  <section>
+    <div class="section-title">Research Experience</div>
+    <div class="card">
+      <div class="exp-header"><span class="exp-title">Undergraduate Research Lead</span><span class="exp-date">2023 – 2024</span></div>
+      <div class="exp-org">Olabisi Onabanjo University, Ago-Iwoye</div>
+      <div><strong>Project:</strong> Assessment of Seasonal Variation in Ecological Indices of Teak Plantation Canopy in Arakanga Forest Reserve</div>
+      <div class="exp-desc" style="margin-top: 0.6rem;"><ul><li><i class="fas fa-leaf"></i> Designed & conducted ecological field surveys to assess seasonal changes in canopy structure & biodiversity indices.</li><li><i class="fas fa-leaf"></i> Produced comprehensive peer-ready research reports contributing to plantation ecology & sustainable management.</li><li><i class="fas fa-leaf"></i> Co-authored journal article currently under review (NSUK Journal of Science and Technology, 2025).</li></ul></div>
+    </div>
+  </section>
+
+  <!-- Publication -->
+  <section>
+    <div class="section-title">Publication (Under Review)</div>
+    <div class="publication-block">
+      <i class="fas fa-book-open"></i> <strong>Banjo, O. B., & Akintulubo, D. (2025).</strong> Assessment of Seasonal Variation in Ecological Indices of Teak Plantation Canopy in Arakanga Forest Reserve. <em>NSUK Journal of Science and Technology</em>, x(x): xx–xx. (Under Review)
+    </div>
+  </section>
+
+  <!-- Volunteering & Leadership -->
+  <section>
+    <div class="section-title">Volunteering & Leadership</div>
+    <div class="grid-2">
+      <div class="card"><i class="fas fa-globe-africa"></i> <strong>World Cleanup Day Volunteer</strong> (Sep 2025) – Participated in national cleanup, promoted environmental awareness & waste reduction.</div>
+      <div class="card"><i class="fas fa-users"></i> <strong>Forestry & Wildlife Students Association (FOWISA)</strong> – Member (2021-2024), organized seminars, conservation initiatives, student ambassador.</div>
+      <div class="card"><i class="fas fa-chalkboard"></i> <strong>Assistant Class Representative</strong> (2019-2020) – Coordinated faculty-student communication, academic collaboration.</div>
+    </div>
+  </section>
+
+  <!-- Certifications & Training -->
+  <section>
+    <div class="section-title">Certifications & Training</div>
+    <div class="grid-2">
+      <div class="card"><i class="fas fa-certificate"></i> <strong>Certificate in Virtual Assistance</strong> – DEXA Online Tech Forum (Mar 2025)<br><span style="font-size:0.8rem;">Admin support, scheduling, remote collaboration tools</span></div>
+      <div class="card"><i class="fas fa-leaf"></i> <strong>Fundamentals of Sustainability and Technology</strong> – IBM SkillsBuild (Jan 2025)<br><span style="font-size:0.8rem;">Sustainability frameworks, digital technology applications, responsible innovation</span></div>
+    </div>
+  </section>
+
+  <!-- Fellowships, Programs & Recognition -->
+  <section>
+    <div class="section-title">Fellowships & Recognition</div>
+    <div class="grid-2">
+      <div class="card"><i class="fas fa-medal"></i> <strong>Top 100 Africa Future Leaders Award – Class of 2025</strong><br>Selected among 100 exceptional young African leaders for academic excellence, leadership potential.</div>
+      <div class="card"><i class="fas fa-seedling"></i> <strong>Global Agricultural Development Program</strong> – MyFarmBase (Apr 2022)<br>International training on food systems, agribusiness strategy.</div>
+    </div>
+  </section>
+
+  <!-- Awards & Honours -->
+  <section>
+    <div class="section-title">Awards & Honours</div>
+    <div class="card">
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+        <span class="award-badge"><i class="fas fa-trophy"></i> Vice Chancellor's Award – First Class Honours (2025)</span>
+        <span class="award-badge"><i class="fas fa-star"></i> Top 100 Africa Future Leaders (2025)</span>
+        <span class="award-badge"><i class="fas fa-award"></i> Farm and Fortune Variety Show Winner (2023)</span>
+        <span class="award-badge"><i class="fas fa-globe"></i> Special Recognition Award – First Class Honours in Forestry (2025)</span>
+        <span class="award-badge"><i class="fas fa-user-graduate"></i> Participant Recognition – Global Agricultural Development Program</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Competencies -->
+  <section>
+    <div class="section-title">Skills & Competencies</div>
+    <div class="card">
+      <div><strong>🌿 Technical & Professional</strong></div>
+      <div style="margin: 0.6rem 0 0.8rem 0;">
+        <span class="skill-tag">Species Identification</span>
+        <span class="skill-tag">Biodiversity Monitoring</span>
+        <span class="skill-tag">Ecosystem Assessment</span>
+        <span class="skill-tag">Habitat Surveys</span>
+        <span class="skill-tag">Ecological Data Analysis (SPSS, Excel)</span>
+        <span class="skill-tag">Conservation Practices</span>
+        <span class="skill-tag">Research & Report Writing</span>
+        <span class="skill-tag">Virtual Assistance</span>
+        <span class="skill-tag">Records Management</span>
+        <span class="skill-tag">Data Entry & Digitization</span>
+      </div>
+      <div><strong>💻 Digital & Technology</strong></div>
+      <div style="margin: 0.6rem 0 0.8rem 0;">
+        <span class="skill-tag">MS Office Suite</span>
+        <span class="skill-tag">Google Workspace</span>
+        <span class="skill-tag">Remote Collaboration Tools</span>
+        <span class="skill-tag">Zoom / Google Meet</span>
+      </div>
+      <div><strong>🤝 Soft Skills</strong></div>
+      <div>
+        <span class="skill-tag">Communication & Leadership</span>
+        <span class="skill-tag">Time Management</span>
+        <span class="skill-tag">Attention to Detail</span>
+        <span class="skill-tag">Adaptability</span>
+        <span class="skill-tag">Analytical Thinking</span>
+        <span class="skill-tag">Teamwork</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages & Interests -->
+  <section>
+    <div class="section-title">Languages & Interests</div>
+    <div class="grid-2">
+      <div class="card">
+        <i class="fas fa-language"></i> <strong>Languages</strong><br>
+        English – Fluent (Reading, Writing, Speaking)<br>
+        Yoruba – Intermediate (Reading, Writing, Speaking)
+      </div>
+      <div class="card interests">
+        <i class="fas fa-heart"></i> <strong>Professional Interests</strong><br>
+        Forest Ecology | Wildlife Conservation | Sustainable Forestry | Climate Change & Ecosystem Dynamics | Ecological Administration | Virtual Assistance | Tech for Sustainability | Agricultural Development
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & References final block -->
+  <section id="contact-cv">
+    <div class="section-title">References & Connect</div>
+    <div class="card" style="text-align: center; background: #f9fef6;">
+      <p><i class="fas fa-envelope-open-text"></i> Professional references are available upon request.</p>
+      <div style="margin-top: 1rem;">
+        <a href="mailto:akintulubodeborah@gmail.com?subject=Opportunity%20for%20Deborah" style="background: #2b5e2f; color: white; padding: 0.6rem 1.5rem; border-radius: 40px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;"><i class="fas fa-paper-plane"></i> Email me directly</a>
+        <a href="tel:+2347033769562" style="background: none; border: 1px solid #2b5e2f; margin-left: 0.8rem; padding: 0.55rem 1.4rem; border-radius: 40px; text-decoration: none; color: #2b5e2f;"><i class="fas fa-phone-alt"></i> Call</a>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.8rem;"><i class="fas fa-cloud-upload-alt"></i> Ready to contribute to conservation, research, or administrative excellence.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Deborah Akintulubo — Forestry & Wildlife | Built with <i class="fas fa-seedling"></i> for global impact</p>
+    <p style="margin-top: 0.3rem;">📍 Ogun State, Nigeria | debby.vercel.app</p>
+  </footer>
+</div>
+
+<script>
+  // Request CV functionality: opens email with CV request subject
+  const requestBtn = document.getElementById('requestCvBtn');
+  if(requestBtn) {
+    requestBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = 'mailto:akintulubodeborah@gmail.com?subject=CV%20Request%20-%20Deborah%20Akintulubo&body=Hello%20Deborah,%0A%0AI%20would%20like%20to%20request%20your%20professional%20CV.%0A%0AThank%20you.';
+    });
+  }
+
+  // small console friendly note for image: if profile image missing, onerror already handled. Provide friendly reminder.
+  console.log("Portfolio ready — add your profile photo as 'profile.jpg' in the root folder for best display.");
+</script>
+</body>
+</html>
